@@ -2,12 +2,12 @@
 
 namespace App\Model;
 
+use App\Model\Review;
 use Illuminate\Database\Eloquent\Model;
-use APP\Model\Review;
 
 class Product extends Model
 {
-    protected $fillable = [
+	protected $fillable = [
 		'name','detail','stock','price','discount'
 	];
     public function reviews()
@@ -15,3 +15,4 @@ class Product extends Model
     	return $this->hasMany(Review::class); 
     }
 }
+
